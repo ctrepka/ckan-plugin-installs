@@ -60,8 +60,7 @@ def install_ckanext_spatial(github_token=''):
     PLUGIN_NAME = "ckanext-spatial"
 
     install_cmds = """
-    pip install -e "git+https://{GHT}@github.com/ckan/ckanext-spatial.git#egg=ckanext-spatial" && \
-
+    pip install -e "git+https://{GHT}@github.com/ckan/ckanext-spatial.git#egg=ckanext-spatial"
     """.format(
         GHT=github_token
     )
@@ -88,6 +87,7 @@ def install_ckanext_officedocs(github_token=''):
 
     install_cmds = """
     git clone https://{GHT}@github.com/dathere/ckanext-officedocs {PD}/{PN} && \
+    cd {PD}/{PN} && \
     python setup.py install
     """.format(
         PD=PLUGINS_DIR,
@@ -127,6 +127,7 @@ def install_ckanext_contact(github_token=''):
 
     install_cmds = """
     git clone https://{GHT}@github.com/dathere/ckanext-contact {PD}/{PN} && \
+    cd {PD}/{PN} && \
     python setup.py install
     """.format(
         PD=PLUGINS_DIR,
