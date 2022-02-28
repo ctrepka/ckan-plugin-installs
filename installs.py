@@ -25,8 +25,8 @@ def install_twdh_theme(github_token=''):
     install_cmds = """
     git clone https://{GHT}@github.com/dathere/ckanext-twdh_theme.git {PD}/{PN} && \
     cd {PD}/{PN} && \
-    pip install -e . && \
-    pip install -r requirements.txt
+    python -m pip install -e . && \
+    python -m pip install -r requirements.txt
     """.format(
         PD=PLUGINS_DIR,
         PN=PLUGIN_NAME,
@@ -43,8 +43,8 @@ def install_twdh_schema(github_token=''):
     install_cmds = """
     git clone https://{GHT}@github.com/dathere/ckanext-twdh_schema.git {PD}/{PN} && \
     cd {PD}/{PN} && \
-    pip install -e . && \
-    pip install -r requirements.txt
+    python -m pip install -e . && \
+    python -m pip install -r requirements.txt
     """.format(
         PD=PLUGINS_DIR,
         PN=PLUGIN_NAME,
@@ -60,7 +60,7 @@ def install_ckanext_spatial(github_token=''):
     PLUGIN_NAME = "ckanext-spatial"
 
     install_cmds = """
-    pip install -e "git+https://{GHT}@github.com/ckan/ckanext-spatial.git#egg=ckanext-spatial"
+    python -m pip install -e "git+https://{GHT}@github.com/ckan/ckanext-spatial.git#egg=ckanext-spatial"
     """.format(
         GHT=github_token
     )
@@ -73,7 +73,7 @@ def install_ckanext_scheming(github_token=''):
     PLUGIN_NAME = "ckanext-scheming"
 
     install_cmds = """
-    pip install -e 'git+https://{GHT}@github.com/ckan/ckanext-scheming.git#egg=ckanext-scheming'
+    python -m pip install -e 'git+https://{GHT}@github.com/ckan/ckanext-scheming.git#egg=ckanext-scheming'
     """.format(
         GHT=github_token
     )
@@ -103,7 +103,7 @@ def install_pages(github_token=''):
     PLUGIN_NAME = "ckanext-pages"
 
     install_cmds = """
-    pip install -e 'git+https://{GHT}@github.com/ckan/ckanext-pages.git#egg=ckanext-pages'
+    python -m pip install -e 'git+https://{GHT}@github.com/ckan/ckanext-pages.git#egg=ckanext-pages'
     """.format(
         GHT=github_token
     )
@@ -115,7 +115,7 @@ def install_ckanext_showcase():
     PLUGIN_NAME = "ckanext-showcase"
 
     install_cmds = """
-    pip install ckanext-showcase
+    python -m pip install ckanext-showcase
     """
 
     print('running cmd: {c}'.format(c=install_cmds))
@@ -143,7 +143,7 @@ def install_ckanext_harvest(github_token=''):
     PLUGIN_NAME = "ckanext-harvest"
 
     install_cmds = """
-    pip install -e git+https://{GHT}@github.com/ckan/ckanext-harvest.git#egg=ckanext-harvest#egg=ckanext-harvest
+    python -m pip install -e git+https://{GHT}@github.com/ckan/ckanext-harvest.git#egg=ckanext-harvest#egg=ckanext-harvest
     """.format(
         GHT=github_token
     )
