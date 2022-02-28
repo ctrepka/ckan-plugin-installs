@@ -87,7 +87,7 @@ def install_ckanext_officedocs(github_token=''):
     PLUGIN_NAME = "ckanext-officedocs"
 
     install_cmds = """
-    git clone 'https://{GHT}@github.com/dathere/ckanext-officedocs {PD}/{PN}' && \
+    git clone https://{GHT}@github.com/dathere/ckanext-officedocs {PD}/{PN} && \
     python setup.py install
     """.format(
         PD=PLUGINS_DIR,
@@ -126,7 +126,7 @@ def install_ckanext_contact(github_token=''):
     PLUGIN_NAME = "ckanext-contact"
 
     install_cmds = """
-    git clone 'https://{GHT}@github.com/dathere/ckanext-contact {PD}/{PN}' && \
+    git clone https://{GHT}@github.com/dathere/ckanext-contact {PD}/{PN} && \
     python setup.py install
     """.format(
         PD=PLUGINS_DIR,
